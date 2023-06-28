@@ -31,5 +31,5 @@ jobs:
         application_name: MLProjectFinal
         environment_name: MLProjectFinal-env
         version_label: "MLProjectFinal"
-        region: us-east-2
+        region: eu-north-1
         deployment_package: deploy.zip
