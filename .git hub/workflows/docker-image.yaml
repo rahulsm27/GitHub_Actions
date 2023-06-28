@@ -43,6 +43,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: MLProjectFinal
         environment_name: MLProjectFinal-env
-        version_label: "birds-classifier-api-${{ steps.format-time.outputs.replaced }}"
+        version_label: "MLProjectFinal-api-${{ steps.format-time.outputs.replaced }}"
         region: us-east-2
         deployment_package: deploy.zip
