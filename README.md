@@ -1,18 +1,20 @@
-# ML_Project
-## Machine Learning Project
+# GitHub Actions
 
 This repos is to demo how we can trigger github actions. It automates the building of a Docker image from the repository's source code, generates a deployment package, and deploys it to AWS Elastic Beanstalk upon pushes to the main branch or pull requests targeting the main branch.
 
 This GitHub Actions workflow, named "Docker Image CI," is triggered on pushes to the main branch and pull requests targeting the main branch. 
 
-# Build Job:
+## Build Job:
 
-This job runs on an Ubuntu latest runner.
-It checks out the source code using actions/checkout@v2.
-It builds a Docker image named "ml_project" using the provided Dockerfile in the repository root directory.
-It generates a deployment package by compressing all files in the repository into a zip file named "deploy.zip".
+1. This job runs on an Ubuntu latest runner.
 
-# Deploy to EB:
+2. It checks out the source code using actions/checkout@v2.
+
+3. It builds a Docker image named "ml_project" using the provided Dockerfile in the repository root directory.
+
+4. It generates a deployment package by compressing all files in the repository into a zip file named "deploy.zip".
+
+## Deploy to EB:
 
 This step uses the einaregilsson/beanstalk-deploy@v14 action to deploy the built Docker image to AWS Elastic Beanstalk.
 
